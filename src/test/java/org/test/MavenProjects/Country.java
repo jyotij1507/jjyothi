@@ -17,22 +17,23 @@ public class Country {
 		
 		//finding the table rows
 		List<WebElement> tRow=driver.findElements(By.tagName("tr"));
-	//	for (int i = 0; i < tRow.size(); i++) {
+		for (int i = 0; i < tRow.size(); i++) {
 			WebElement row=tRow.get(4);
 		//finding the table data
 				List<WebElement> tData=driver.findElements(By.tagName("td"));
 				for (int j = 0; j < tData.size(); j++) {
 					WebElement column=tData.get(j);
 					String name=column.getText();
-					//if(name.equals("china"));
-				//	{
-				//		System.out.println(name);
-				//	}
+					if(name.equals("china"));
+					{
+					System.out.println(name);
+					}
 				}
-				//System.out.println(name);
+				System.out.println(row);
 		}
-			
+	}
+}
 		
 	
 
-}
+
